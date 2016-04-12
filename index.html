@@ -11,7 +11,8 @@ path {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v0.min.js"></script>
 <script>
-var width = 1800,
+
+    var width = 1800,
     height = 800;
 
 var projection = d3.geo.mercator()
@@ -33,7 +34,7 @@ var g = svg.append("g");
 d3.json("data/world-110m2.json", function(error, topology) {
 
 // load and display the cities
-d3.csv("data/centersKmeansHW.csv", function(error, data) {
+d3.csv("data/centersLl500.csv", function(error, data) {
         g.selectAll("circle")
                 .data(data)
                 .enter()
