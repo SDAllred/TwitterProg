@@ -34,7 +34,7 @@ var g = svg.append("g");
 d3.json("data/world-110m2.json", function(error, topology) {
 
 // load and display the cities
-d3.csv("data/centersLl500.csv", function(error, data) {
+d3.csv("data/centersLl200.csv", function(error, data) {
         g.selectAll("circle")
                 .data(data)
                 .enter()
@@ -46,7 +46,7 @@ d3.csv("data/centersLl500.csv", function(error, data) {
                     return projection([d.lat, d.lon])[1];
                 })
                 .attr("r", 5)
-                .style("fill", "blue");
+                .style("fill", "green");
     });
 
 
