@@ -43,7 +43,7 @@ var g = svg.append("g");
 d3.json("data/world-110m2.json", function(error, topology) {
 
 // load and display the cities
-d3.csv("data/centersLl200.csv", function(error, data) {
+d3.csv("data/TheWalkingDead.csv", function(error, data) {
 //        g.selectAll("circle")
 //                .data(data)
 //                .enter()
@@ -69,7 +69,7 @@ d3.csv("data/centersLl200.csv", function(error, data) {
                 .attr("cy", function(d) {
                     return projection([d.lat, d.lon])[1];
                 })
-                .attr("r", 4)
+                .attr("r", 3)
                 .style("fill", "#ff3300");
         index++;
         if (index == data.length) { clearInterval(interval_id); }
