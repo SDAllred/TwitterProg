@@ -43,7 +43,7 @@ var g = svg.append("g");
 d3.json("data/world-110m2.json", function(error, topology) {
 
 // load and display the cities
-d3.csv("data/TheWalkingDead.csv", function(error, data) {
+d3.csv("data/TheVoiceBrasil.csv", function(error, data) {
 //        g.selectAll("circle")
 //                .data(data)
 //                .enter()
@@ -74,7 +74,7 @@ d3.csv("data/TheWalkingDead.csv", function(error, data) {
         index++;
         if (index == data.length) { clearInterval(interval_id); }
     }
-    var interval_id = setInterval(iterativeDraw, 500);
+    var interval_id = setInterval(iterativeDraw, 70);
 
 
 
