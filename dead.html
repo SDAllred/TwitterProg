@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
+
     path {
         stroke: white;
         stroke-width: 0.25px;
         fill: #cccccc;
     }
+    #TitleRow {
+        text-indent: 150px;
+        font-size: 130%;
+    }
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v0.min.js"></script>
+<title>#TheWalkingDead</title>
+<div id="TitleRow">
+<p><H1>#TheWalkingDead</H1></p>
+</div>
 <script>
 
-    var width = 1800,
-            height = 1000;
+    var width = 2500,
+            height = 1100;
 
     var projection = d3.geo.mercator()
-            .center([0, 5 ])
+            .center([0, 5])
             .translate([width/2, height/2])
-            .scale(200)
+            .scale(350)
             .rotate([-180,0]);
 
     var svg = d3.select("body").append("svg")
             .attr("width", width)
             .attr("height", height);
+
 
     var path = d3.geo.path()
             .projection(projection);
@@ -69,7 +79,7 @@
                         .attr("cy", function(d) {
                             return projection([d.lat, d.lon])[1];
                         })
-                        .attr("r", 3)
+                        .attr("r", 4)
                         .style("fill", "#ff3300");
                 index++;
                 if (index == data.length) { clearInterval(interval_id); }
