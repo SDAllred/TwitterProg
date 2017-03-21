@@ -20,13 +20,13 @@
 </div>
 <script>
 
-    var width = 2500,
-            height = 1100;
+    var width = 1800,
+            height = 800;
 
     var projection = d3.geo.mercator()
             .center([0, 5])
             .translate([width/2, height/2])
-            .scale(350)
+            .scale(250)
             .rotate([-180,0]);
 
     var svg = d3.select("body").append("svg")
